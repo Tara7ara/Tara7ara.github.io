@@ -9,7 +9,7 @@ Esta página es un test a modo de CV.
 - [ ] Crear estilo básico
 - [ ] Y probar que todo vaya bien
 
-##Campos del formulario de contacto
+## Campos del formulario de contacto
 
 El formulario de contacto en HTML incluye los siguientes campos:
 
@@ -23,7 +23,7 @@ El formulario de contacto en HTML incluye los siguientes campos:
 - input type="number" name="edad": campo para ingresar la edad del usuario.
 - textarea name="mensaje": campo de texto para que el usuario pueda escribir un mensaje.
 
-##Explicación del código JavaScript
+## Explicación del código JavaScript
 
 He agregado un script en JavaScript que agrega un controlador de eventos al formulario de contacto tal como nos pide la tarea.
 Este controlador intercepta el envío del formulario al hacer clic en el botón Enviar y evita que la página se recargue al utilizar event.preventDefault();. 
