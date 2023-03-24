@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Taratara's Projects</title>
+	<link rel="stylesheet" href="style.css" />	
+</head>
+<body>
+	<header>
+		<h1>Estudiante de <abbr title="Escola de Noves Tecnologies Interactives">ENTI</abbr></h1>
+		<p>Asignatura de lenguajes de marcas</p>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Portada</a></li>
+			<li><a href="cv.html">CV</a></li>
+			<li><a href="game.html">Juego</a></li>
+			<li><a href="projects.html">Proyectos</a></li>
+			<li><a href="contact.html">Contacto</a></li>
+		</ul>
+	</nav>
+	
+	<main id="contact-main">
+		<h2>Formulario de contacto</h2>
+		<form id="contact-form">
+			<p><label for="nombre">Nombre:</label> <input type="text" name="contact_name" id="nombre" /></p>	
+			<p><label for="apellido">Apellido:</label> <input type="text" name="contact_surname" id="apellido" /></p>	
+			<p><label for="email">e-mail:</label> <input type="email" name="contact_email" id="email" /></p>
+			<p><label for="password">Contraseña:</label><input type="password" name="password" id="password"></p>
+			<p><label for="ojos">Color ojos:</label> <input type="color" name="contact_color" id="ojos" /></p>	
+			<p><label for="nacimiento">Fecha de nacimiento:</label> <input type="date" name="contact_date" id="nacimiento" min="2005-01-01" /></p>	
+			<p><label for="zodiaco">Signo zodiacal:</label> 
+				<select name="contact_zodiaco" id="zodiaco">
+					<option value="aries">Aries</option>
+					<option value="tauro">Tauro</option>
+					<option value="geminis">Géminis</option>
+					<option value="acuario">Acuario</option>
+					<option value="piscis">Piscis</option>
+				</select>
+			</p>	
+			<p><label for="edad">Edad, que no me ha quedado claro:</label><input type="number" name="edad" id="edad" min="18" max="100"></p>
+			<!-- en el input se puede añadir el required para que sea obligatorio poner-->
+			
+			<p><label for="mensaje">Que opinas de este cuestionario:</label><textarea name="mensaje" id="mensaje" rows="4" cols="50"></textarea></p>
+			<p><input type="submit" value="Enviar" /></p>
+		</form>
+	</main>
+
+	<footer>
+		<p>Nombre (c) 2023</p>
+	</footer>
+	
+	<script>
+	document.getElementById("contact-form").addEventListener("submit", function(event) {
+		event.preventDefault();
+		enviarFormulario();
+	});
+	function enviarFormulario() {
+		console.log("ENVIADO");
+	 }
+	</script>
+	
+</body>
+</html>
