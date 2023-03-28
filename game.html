@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="favicon.ico" href="favicon.ico">
+<title>Taratara's Projects</title>
+<link rel="stylesheet" href="style.css" />
+<script>
+
+let contador = 10;
+
+function cuenta ()
+{
+	contador --;
+	
+	if (contador == 0) {
+		document.getElementById("contador").innerHTML = "Fin del tiempo";
+		clearInterval(contador_interval);
+	}
+	else{
+		document.getElementById("contador").innerHTML = contador;
+	}
+}
+
+let contador_interval;
+
+function start_contador () 
+{
+	contador_interval = setInterval(cuenta,1000);
+}
+
+	function cambia (){
+		document.getElementById("boton_color").style.backgroundColor = "red";
+		document.getElementById("boton_color").style.color = "green";
+	}
+
+
+
+
+
+
+let numero = Math.floor(Math.random()*100+1);
+
+function check_number ()
+{
+	console.log(numero);
+	let jugador = document.getElementById("numero_jugador").value;
+
+	console.log(jugador);
+
+	let valor = parseInt(jugador);
+
+	if (isNaN(valor)){
+		document.getElementById("resultado").innerHTML = "<strong class=\"error\">ERROR</strong>";
+
+		return;
+	}
+
+	if (valor > numero){
+		document.getElementById("resultado").innerHTML = "<em>El numero "+valor+" es mayor</em>";
+	}
+	else if (valor < numero){
+		document.getElementById("resultado").innerHTML = "<em>El numero "+valor+" es menor</em>";
+	}
+	else{
+		document.getElementById("resultado").innerHTML = "<strong>GG</strong>";
+	}
+	
+}
+
+</script>
+</head>
+<body>
+<header>
+<h1>Taratara's Projects</h1>
+<p>Estudiante de Cyberseguridad en <abbr title="Escola de Noves Tecnologies de Interactives">ENTI</abbr></p>
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Portada</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><a href="game.html">Juego</a></li>
+<li><a href="projects.html">Proyectos</a></li>
+<li><a href="contact.html">Contacto</a></li>
+</ul>
+</nav>
+<main>
+<h2>Adivina el numero entre el 1 y el 100</h2>
+<form>
+<p id="resultado">Introduce un numero</p>
+<p><input type="text" id="numero_jugador"/></p>
+<p><input type="button" value="¡Adivina!" onClick="check_number();" /></p>
+<p><input type="button" id="boton_color" value="CAMBIA DE COLOR" onClick="cambia();" /></p>
+<p id="contador">10</p>
+
+<p><input type="button" id="inicia_contador" onClick="start_contador();" value="Inicia el contador" /></p>
+</form>
+</main>
+<footer>
+<p>Taratara (c) 2023</p>
+</footer>
+</body>
+</html>
+
