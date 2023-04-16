@@ -1,7 +1,7 @@
 # Tara7ara.github.io
 Cyberseguridad: Llenguatge de Marques, con el profesor Rafa Laguna
 
-Todos los cambios se pueden ver en el dominio https://tara7ara.com 
+Todos los cambios se pueden ver en el dominio https://tara7ara.com o https://tara7ara.github.io/
 
 **Recordatorio** de subir las cosas al GitHub: 
 * git add -A . (para añadir los camios al git)
