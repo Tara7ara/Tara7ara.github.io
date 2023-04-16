@@ -186,6 +186,18 @@ Tambien hay etiquetas que no he hablado aqui pero en el archivo nombrado anterio
 * Para comentar se usa ```<!-- -->```
 * Para citar un comentario se usa ```<blockquote>```
 
+**Campos del formulario de contacto**
+
+* input type="text" name="contact_name": campo de texto para el nombre del usuario.
+* input type="text" name="contact_surname": campo de texto para el apellido del usuario.
+* input type="email" name="contact_email": campo de texto para el correo electrónico del usuario.
+* input type="password" name="contraseña": campo de texto para la contraseña del usuario.
+* input type="color" name="contact_color": campo para seleccionar el color de los ojos del usuario.
+* input type="date" name="contact_date": campo para ingresar la fecha de nacimiento del usuario.
+* select name="contact_zodiaco": campo de selección para elegir el signo zodiacal del usuario.
+* input type="number" name="edad": campo para ingresar la edad del usuario.
+* textarea name="mensaje": campo de texto para que el usuario pueda escribir un mensaje.
+
 **RECORDATORIO**, si estas en firefox, y el html esta bien hecho, hacemos control+u y saldra una ventana extra con el html.
 
 ---
@@ -397,52 +409,35 @@ fun main(args: Array<String>) {
 
 \*que en otras cosas*
 
+## JavaScript
 
+```javascript
+const botonEnviar = document.getElementById('boton-enviar');
+botonEnviar.addEventListener('click', function(event) {
+  event.preventDefault();
+  enviarFormulario();
+});
 
+function enviarFormulario() {
+  console.log('ENVIADO');
+}
+```
 
+JavaScript es un lenguaje de programación interpretado que se utiliza principalmente para crear interactividad en páginas web. 
 
+## JSON
 
+```JSON
+[
+  {
+    "adivinanza": "Oro parece, plata no es. ¿Qué es?",
+    "respuesta": "Platano"
+  },
+  {
+    "adivinanza": "Tiene escamas, pero no es un reptil, tiene bigotes pero no es un gato. ¿Qué es?",
+    "respuesta": "Pez"
+  }
+]
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Campos del formulario de contacto
-
-El formulario de contacto en HTML incluye los siguientes campos:
-
-- input type="text" name="contact_name": campo de texto para el nombre del usuario.
-- input type="text" name="contact_surname": campo de texto para el apellido del usuario.
-- input type="email" name="contact_email": campo de texto para el correo electrónico del usuario.
-- input type="password" name="contraseña": campo de texto para la contraseña del usuario.
-- input type="color" name="contact_color": campo para seleccionar el color de los ojos del usuario.
-- input type="date" name="contact_date": campo para ingresar la fecha de nacimiento del usuario.
-- select name="contact_zodiaco": campo de selección para elegir el signo zodiacal del usuario.
-- input type="number" name="edad": campo para ingresar la edad del usuario.
-- textarea name="mensaje": campo de texto para que el usuario pueda escribir un mensaje.
-
-## Explicación del código JavaScript
-
-He agregado un script en JavaScript que agrega un controlador de eventos al formulario de contacto tal como nos pide la tarea.
-Este controlador intercepta el envío del formulario al hacer clic en el botón Enviar y evita que la página se recargue al utilizar event.preventDefault();. 
-En su lugar, se ejecuta la función enviarFormulario(), que simplemente imprime "ENVIADO" en la consola.
-El <script> esta al final de todo para que se ejecute cuando le doy click al boton.
+JSON (JavaScript Object Notation) es un formato de datos ligero y fácil de leer y escribir para intercambiar datos entre diferentes sistemas. 
