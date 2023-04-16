@@ -1,0 +1,109 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de la barra de navegación */
+nav {
+    background-color: #f2f2f2;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+nav li {
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 25px;
+    transition: color 0.3s ease;
+}
+nav li:first-child {
+    flex-basis: 80%;
+    flex-grow: 0;
+}
+nav li:not(:first-child) {
+    flex-grow: 0;
+}
+nav a:hover {
+    color: #555;
+}
+nav ul li {
+    padding: 5px 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav ul li:hover {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Estilo del main */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-top: 50px;
+}
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+main #contact-form p {
+    margin-bottom: 20px;
+}
+main #contact-form label {
+    display: inline-block;
+    width: 110px;
+    font-weight: bold;
+}
+main #contact-form input,
+main #contact-form textarea {
+    width: calc(100% - 120px);
+}
+main #contact-form input[type="submit"] {
+    width: auto;
+    padding: 5px 15px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+main #contact-form input[type="submit"]:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: transparent;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+footer a {
+    text-decoration: none;
+    color: inherit;
+}

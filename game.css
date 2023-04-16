@@ -1,0 +1,195 @@
+/* Estilo general */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+/* Estilo de la barra de navegación */
+nav {
+	background-color: #f2f2f2;
+	padding: 20px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+}
+nav li {
+	margin-right: 20px;
+}
+nav a {
+	text-decoration: none;
+	color: #333;
+	font-size: 16px;
+	padding: 25px;
+	transition: color 0.3s ease;
+}
+nav li:first-child {
+	flex-basis: 80%;
+	flex-grow: 0;
+}
+nav li:not(:first-child) {
+	flex-grow: 0;
+}
+nav a:hover {
+	color: #555;
+}
+nav ul li {
+	padding: 5px 0;
+	background-color: transparent;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav ul li:hover {
+	background-color: #f2f2f2;
+	color: #333;
+}
+
+
+/* Estilo del contenido principal */
+h1 {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+/* Estilo del contenedor de botones */
+.botones {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; 
+	margin: 0 auto;
+	max-width: 50%; 
+}
+button {
+	display: block;
+	width: 25%; 
+	padding: 10px 20px;
+	border: none;
+	background-color: #333;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+	margin: 5px; 
+}
+button:hover {
+	background-color: #555;
+}
+
+/* Estilo de botón para dispositivos móviles */
+@media (max-width: 768px) {
+	button {
+		width: 50%;
+	}
+}
+p#resultado {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+/* Estilo de las animaciones */
+body.ganaste {
+	animation: ganar 1.5s;
+}
+@keyframes ganar {
+	0%, 100% {
+		background-color: #fff;
+	}
+	50% {
+		background-color: #a3d6a3;
+	}
+}
+body.perdiste {
+	animation: perder 1.5s;
+}
+@keyframes perder {
+	0%, 100% {
+		background-color: #fff;
+	}
+	50% {
+		background-color: #e8a3a3;
+	}
+}
+
+/*Estilo del main*/
+main {
+	position: fixed;
+	bottom: 30px;
+	right: 300px; 
+	transform: translateX(80%); 
+	background-color: #f2f2f2;
+	width: 300px;
+	padding: 10px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	transition: transform 0.3s ease-in-out;
+}
+main h1 {
+	padding: 0px;
+	margin: 10px;
+	text-decoration: underline;
+}
+main button {
+	width: 96%;
+}
+aside button {
+	width: 35%;
+}
+
+/*boton troll*/
+#container {
+	position: fixed;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 300px;
+	border: 2px transparent #000;
+}
+#teleport {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	font-size: 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+
+/* Estilo del pie de página */
+footer {
+	background-color: transparent;
+	color: black;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 14px;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+footer a {
+	text-decoration: none;
+	color: inherit;
+}
+.hide-on-mobile {
+	display: none;
+}

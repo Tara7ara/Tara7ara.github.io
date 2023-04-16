@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" type="favicon.ico" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+	<link rel="stylesheet" href="game.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="game.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://github.com/tara7ara">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/mart%C3%AD-tarras%C3%B3n-videla-a4b127226/">Linkedin</a></li>
+			<li><a href="cv.html">Curriculum</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+			<li><a href="games.html">Juego</a></li>
+        </ul>
+    </nav>
+    <h1>Piedra, Papel, Tijera, Fuego, Agua, Aire y Esponja</h1>
+    <form class="botones">
+		  <button type="button" onclick="jugar('fuego')">Fuego</button>
+		  <button type="button" onclick="jugar('piedra')">Piedra</button>
+		  <button type="button" onclick="jugar('agua')">Agua</button>
+		  <button type="button" onclick="jugar('aire')">Aire</button>
+		  <button type="button" onclick="jugar('papel')">Papel</button>
+		  <button type="button" onclick="jugar('esponja')">Esponja</button>
+		  <button type="button" onclick="jugar('tijera')">Tijera</button>
+	</form>
+    <p id="resultado"></p>
+	<main id="notas">
+		<h1>NORMAS</h1>
+		<p>La roca aparta el fuego y machaca la tijera y la esponja.</p>
+		<p>El fuego derrite la tijera, quema el papel y la esponja.</p>
+		<p>La tijera corta el aire, el papel y la esponja.</p>
+		<p>La esponja empapa el papel, llena sus huecos de aire y absorbe el agua.</p>
+		<p>El papel mueve el aire, cubre la roca y flota en el agua.</p>
+		<p>El aire apaga el fuego, erosiona la roca y evapora el agua.</p>
+		<p>El agua erosiona la roca, apaga el fuego y oxida la tijera.</p>
+	</main>
+	<aside id="container">
+		<button id="teleport">Intenta tocarme</button>
+	</aside>
+	<footer>
+        <p>Made in <a href="juego.html">Catalonia</a></p>
+    </footer>
+</body>
+</html>
