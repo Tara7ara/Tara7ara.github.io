@@ -1,68 +1,9 @@
-/* Estilo general */
-body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-}
-
-/* Estilo de la barra de navegación */
-nav {
-	background-color: #f2f2f2;
-	padding: 20px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-grow: 1;
-}
-nav li {
-	margin-right: 20px;
-}
-nav a {
-	text-decoration: none;
-	color: #333;
-	font-size: 16px;
-	padding: 25px;
-	transition: color 0.3s ease;
-}
-nav li:first-child {
-	flex-basis: 80%;
-	flex-grow: 0;
-}
-nav li:not(:first-child) {
-	flex-grow: 0;
-}
-nav a:hover {
-	color: #555;
-}
-nav ul li {
-	padding: 5px 0;
-	background-color: transparent;
-	transition: background-color 0.3s ease, color 0.3s ease;
-}
-nav ul li:hover {
-	background-color: #f2f2f2;
-	color: #333;
-}
-
-
-/* Estilo del contenido principal */
 h1 {
 	text-align: center;
 	font-size: 40px;
 	margin-top: 50px;
 	margin-bottom: 20px;
 }
-
-/* Estilo del contenedor de botones */
 .botones {
 	display: flex;
 	justify-content: center;
@@ -86,7 +27,6 @@ button {
 button:hover {
 	background-color: #555;
 }
-
 /* Estilo de botón para dispositivos móviles */
 @media (max-width: 768px) {
 	button {
@@ -98,8 +38,6 @@ p#resultado {
 	margin-top: 30px;
 	font-size: 20px;
 }
-
-/* Estilo de las animaciones */
 body.ganaste {
 	animation: ganar 1.5s;
 }
@@ -122,8 +60,6 @@ body.perdiste {
 		background-color: #e8a3a3;
 	}
 }
-
-/*Estilo del main*/
 main {
 	position: fixed;
 	bottom: 30px;
@@ -147,7 +83,6 @@ main button {
 aside button {
 	width: 35%;
 }
-
 /*boton troll*/
 #container {
 	position: fixed;
@@ -171,24 +106,6 @@ aside button {
 	border-radius: 10px;
 	cursor: pointer;
 	font-size: 16px;
-}
-
-
-/* Estilo del pie de página */
-footer {
-	background-color: transparent;
-	color: black;
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 14px;
-	padding: 10px;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-}
-footer a {
-	text-decoration: none;
-	color: inherit;
 }
 .hide-on-mobile {
 	display: none;
